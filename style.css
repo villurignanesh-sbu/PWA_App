@@ -1,7 +1,14 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    margin-top: 50px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #f5f5f5;
 }
 
 #installButton {
@@ -9,20 +16,12 @@ body {
     border: none;
     color: white;
     padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
+    font-size: 18px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-#installButton:disabled {
-    background-color: #cccccc;
-    cursor: not-allowed;
-}
-
-#installStatus {
-    margin-top: 20px;
-    font-style: italic;
+#installButton:hover {
+    background-color: #45a049;
 }

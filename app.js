@@ -3,19 +3,14 @@ const installButton = document.getElementById('installButton');
 
 // Listen for the 'beforeinstallprompt' event and save the prompt to show later
 window.addEventListener('beforeinstallprompt', (e) => {
-    // Prevent the default prompt
     e.preventDefault();
-    // Save the event to be triggered later
     deferredPrompt = e;
-    // Show the install button
     installButton.style.display = 'block';
+});
 
-    // Set up the install button click listener
-    installButton.addEventListener('click', () => {
-        // Show the prompt to install
+installButton.addEventListener('click', () => {
+    if (deferredPrompt) {
         deferredPrompt.prompt();
-
-        // Wait for the user to respond to the prompt
         deferredPrompt.userChoice.then((choiceResult) => {
             console.log(choiceResult.outcome);
             if (choiceResult.outcome === 'accepted') {
@@ -24,8 +19,9 @@ window.addEventListener('beforeinstallprompt', (e) => {
                 console.log('User dismissed the A2HS prompt');
             }
             deferredPrompt = null;
+            installButton.style.display = 'none';
         });
-    });
+    }
 });
 
 if ('serviceWorker' in navigator) {
@@ -39,6 +35,6 @@ if ('serviceWorker' in navigator) {
 }
 
 // Check if the app is launched in standalone mode and redirect
-if (window.matchMedia('(display-mode: standalone)').matches) {
-    window.location.href = 'https://www.google.com';
+if (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone) {
+    window.location.href = 'https://order.stonegoatsmithtown.com/#/go?rc9oJ&menudirect';
 }
