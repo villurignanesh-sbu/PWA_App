@@ -37,3 +37,8 @@ if ('serviceWorker' in navigator) {
         });
     });
 }
+
+// Check if the app is launched in standalone mode and redirect
+if (window.matchMedia('(display-mode: standalone)').matches) {
+    window.location.href = 'https://www.google.com';
+}
