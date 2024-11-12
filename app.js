@@ -36,5 +36,5 @@ if ('serviceWorker' in navigator) {
 
 // Check if the app is launched in standalone mode and redirect
 if (window.matchMedia('(display-mode: standalone)').matches || navigator.standalone) {
-    window.location.href = 'https://order.stonegoatsmithtown.com/#/go?rc9oJ&menudirect';
+    window.location.href = 'https://app.zippidelivery.com/#/go?gwsje';
 }
