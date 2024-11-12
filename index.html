@@ -8,11 +8,20 @@
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
-    <h1>Welcome to My Simple PWA</h1>
+    <h1>Welcome to 16Round</h1>
     <p>This is a simple Progressive Web App.</p>
-    <p>Redirecting to 16Round</p>
 
-    <button id="installButton" style="display:none;">Install App</button>
+    <!-- Installation button for Android devices -->
+    <button id="installButton" style="display: none;">Install App</button>
+    
+    <!-- Instructions for iOS devices -->
+    <div id="iosInstructions" style="display: none;">
+        <p>To install this app:</p>
+        <ol>
+            <li>Tap the <strong>Share</strong> icon.</li>
+            <li>Select <strong>Add to Home Screen</strong>.</li>
+        </ol>
+    </div>
 
     <script src="app.js"></script>
 </body>
