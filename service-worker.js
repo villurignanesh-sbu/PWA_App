@@ -9,8 +9,8 @@ self.addEventListener('install', (event) => {
                 '/app.js',
                 '/styles.css',
                 '/manifest.json',
-                '/icons/icon-192x192.png',
-                '/icons/icon-512x512.png',
+                '/icons/TheStoneGoat_1.png',
+                '/icons/TheStoneGoat_2.png',
                 '/offline.html'
             ]);
         })
