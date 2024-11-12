@@ -7,7 +7,7 @@ self.addEventListener('install', (event) => {
                 '/',
                 '/index.html',
                 '/app.js',
-                '/styles.css',
+                '/style.css',
                 '/manifest.json',
                 '/icons/TheStoneGoat_1.png',
                 '/icons/TheStoneGoat_2.png',
